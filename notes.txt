@@ -1,0 +1,12 @@
+Install dependencies
+- npm i --save @material-ui/core @material-ui/icons --legacy-peer-deps (for v.18)
+
+Create a navbar under src/components/Navbar.js and import this in our src/App.js
+
+Working in Navbar
+- Add <Appbar> to have 'Toolbar' which will have 
+  1.) Icon, 2.) Typography (className, variant and color) 3.) Switch (for toggle)
+
+- Create styles/NavBarStyles.js for setting up our style that material UI will wrap 
+, generate the output (we also introduce a way to improve the responsive via 
+[theme.breakpoints.up('sm'), for example])
