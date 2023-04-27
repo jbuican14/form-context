@@ -1,6 +1,6 @@
 import { Fade } from '@material-ui/core'
 const styles = theme => {
-console.log('🚀 ~ file: NavBarStyles.js:3 ~ styles ~ theme:', theme.breakpoints)
+// console.log('🚀 ~ file: NavBarStyles.js:3 ~ styles ~ theme:', theme.breakpoints)
 return {
   root: {
     width: "100%",
@@ -22,21 +22,20 @@ return {
   },
   search: {
     position: "relative",
-    // borderRadius: theme.shape.borderRadius,
+    borderRadius: theme.shape.borderRadius,
     // backgroundColor: Fade(theme.palette.common.white, 0.15),
     "&:hover": {
       // backgroundColor: Fade(theme.palette.common.white, 0.25)
     },
     marginLeft: 0,
     width: "100%",
-    // [theme.breakpoints.up("sm")]: {
-    //   marginLeft: theme.spacing.unit,
-    //   width: "auto"
-    // }
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: theme.spacing(),
+      width: "auto"
+    }
   },
   SearchRounded: {
-    // width: theme.spacing * 9,
-    width: 10 * 9,
+    width: theme.spacing * 9,
     height: "100%",
     position: "absolute",
     display: "flex",
@@ -54,12 +53,12 @@ return {
     paddingLeft: 6* 10,
     transition: "width",
     width: "100%",
-    // [theme.breakpoints.up("sm")]: {
-    //   width: 120,
-    // "&:focus" {
-      // width: 200,
-    // }
-    // }
+    [theme.breakpoints.up("sm")]: {
+      width: 120,
+    "&:focus": {
+      width: 200,
+    }
+    }
 
   }
 };

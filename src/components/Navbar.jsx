@@ -1,5 +1,4 @@
-import {AppBar, Toolbar, IconButton, Typography, Switch, InputBase } from "@material-ui/core"
-import { withStyles } from '@material-ui/styles';
+import {AppBar, Toolbar, IconButton, Typography, Switch, InputBase, withStyles } from "@material-ui/core"
 import { SearchRounded } from '@material-ui/icons';
 import styles from '../styles/NavBarStyles';
 
