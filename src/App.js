@@ -1,10 +1,12 @@
-import { ThemeProvider } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
 import Navbar from './components/Navbar';
 
+const theme = createTheme({})
+
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Navbar />
     </ThemeProvider>
   );

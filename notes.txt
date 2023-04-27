@@ -10,3 +10,6 @@ Working in Navbar
 - Create styles/NavBarStyles.js for setting up our style that material UI will wrap 
 , generate the output (we also introduce a way to improve the responsive via 
 [theme.breakpoints.up('sm'), for example])
+https://github.com/Colt/context-demo-app/blob/add-initial-components/src/Navbar.js
+
+- Create Form component

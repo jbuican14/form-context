@@ -4,9 +4,9 @@ import { SearchRounded } from '@material-ui/icons';
 import styles from '../styles/NavBarStyles';
 
 function Navbar(props) {
-  console.log('🚀 ~ file: Navbar.js:6 ~ Navbar ~ props:', props)
+  // console.log('🚀 ~ file: Navbar.js:6 ~ Navbar ~ props:', props)
   const {classes} = props;
-  console.log('🚀 ~ file: Navbar.js:8 ~ Navbar ~ props:', classes)
+  // console.log('🚀 ~ file: Navbar.js:8 ~ Navbar ~ props:', classes)
   return (
     <div className={classes.root}>
       <AppBar position='static' color='primary'>
