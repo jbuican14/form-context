@@ -13,3 +13,11 @@ Working in Navbar
 https://github.com/Colt/context-demo-app/blob/add-initial-components/src/Navbar.js
 
 - Create Form component
+Form has form tag with <FormControl>tag and can be inline or block tag. 
+<InputLabel/>, <FormControlLabel/>, <Button></Button>
+
+
+
+Material UI https://v4.mui.com/customization/globals/ 
+Git : https://github.com/Colt/context-demo-app/blob/add-initial-components/package.json
+
