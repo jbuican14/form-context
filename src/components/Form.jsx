@@ -3,7 +3,7 @@ import { Avatar, Button, CssBaseline,
         Checkbox, Input, InputLabel, 
         Paper, Typography, MenuItem, Select,
         withStyles } from '@material-ui/core';
-import { PhoneLockedOutlined, LockOutlined } from '@material-ui/icons';
+import { LockOutlined } from '@material-ui/icons';
 import styles from "../styles/FormStyles";
 
 function Form({classes}) {
