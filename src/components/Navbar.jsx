@@ -1,11 +1,13 @@
+import { useContext } from 'react';
 import {AppBar, Toolbar, IconButton, Typography, Switch, InputBase, withStyles } from "@material-ui/core"
 import { SearchRounded } from '@material-ui/icons';
 import styles from '../styles/NavBarStyles';
+import { ThemeContext } from '../contexts/ThemeContext'
 
 function Navbar(props) {
-  // console.log('🚀 ~ file: Navbar.js:6 ~ Navbar ~ props:', props)
-  const {classes} = props;
-  // console.log('🚀 ~ file: Navbar.js:8 ~ Navbar ~ props:', classes)
+  const context = useContext(ThemeContext);
+  const {classes} = props; 
+  
   return (
     <div className={classes.root}>
       <AppBar position='static' color='primary'>
