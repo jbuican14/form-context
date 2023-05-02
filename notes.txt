@@ -23,6 +23,9 @@ step3 : createContext you create and add Provider to create <whatever-context.Pr
 </whatever-context.Provider> (pass in "props.children") so you can wrap it. 
 step4 : set the state and pass through  <whatever-context.Provider value={whatever-state}>
 step5 : export both context-obj and </whatever-context.Provider> ***IMPORTANT
+step6 : set to import ThemeContext to where you want it to use ex. Navbar.js
+then what you need to do is import useContext and then initial with your context ex. 
+  'const context = useContext(ThemeContext);'
 
 
 
