@@ -12,9 +12,9 @@ function App() {
     <ThemeContextProvider>
     <ThemeProvider theme={theme}>
       <Top>
-      <Navbar />
-      <Form />
-    </Top>
+        <Navbar />
+        <Form />
+      </Top>
     </ThemeProvider>
     </ThemeContextProvider>
   );

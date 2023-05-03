@@ -16,7 +16,7 @@ https://github.com/Colt/context-demo-app/blob/add-initial-components/src/Navbar.
 Form has form tag with <FormControl>tag and can be inline or block tag. 
 <InputLabel/>, <FormControlLabel/>, <Button></Button>
 
-- Create CONTEXT 
+- Create & init CONTEXT 
 step1 : define a new context --> React.createContext(defaultValue)
 step2 : know that every context obj comes with 'Provider context'
 step3 : createContext you create and add Provider to create <whatever-context.Provider>
@@ -27,6 +27,12 @@ step6 : set to import ThemeContext to where you want it to use ex. Navbar.js
 then what you need to do is import useContext and then initial with your context ex. 
   'const context = useContext(ThemeContext);'
 
+- Set method in context 
+step1 : after decide what you want the method will be, head to the provider in your context
+and create a method ex. toggleTheme() and set state there 
+step2 : send this new method as a value through ThemeProvider 
+ex. '<ThemeContext.Provider value={{isDarkMode, toggleTheme}}>'
+now the context has this function so go ahead and extract it out
 
 
 Material UI https://v4.mui.com/customization/globals/ 

@@ -6,17 +6,18 @@ import { ThemeContext } from '../contexts/ThemeContext'
 
 function Navbar(props) {
   const context = useContext(ThemeContext);
+  const { isDarkMode, toggleTheme } = context;
   const {classes} = props; 
   
   return (
     <div className={classes.root}>
-      <AppBar position='static' color='primary'>
+      <AppBar position='static' color={isDarkMode? 'default': 'primary'}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit">
             <span>🇫🇷</span>
           </IconButton>
           <Typography className={classes.title} variant='h1' color='inherit'>App Title</Typography>
-          <Switch />
+          <Switch onChange={toggleTheme} />
           <div className={classes.grow}/>
           <div className={classes.search}>
             <div className={classes.SearchRounded}>
