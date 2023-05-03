@@ -3,6 +3,7 @@ import {AppBar, Toolbar, IconButton, Typography, Switch, InputBase, withStyles }
 import { SearchRounded } from '@material-ui/icons';
 import styles from '../styles/NavBarStyles';
 import { ThemeContext } from '../contexts/ThemeContext'
+import { LanguageContext } from '../contexts/LanguageContext';
 
 function Navbar(props) {
   const context = useContext(ThemeContext);
@@ -10,13 +11,17 @@ function Navbar(props) {
   const {classes} = props; 
   
   return (
+    <LanguageContext.Consumer>
+      {value => (
     <div className={classes.root}>
       <AppBar position='static' color={isDarkMode? 'default': 'primary'}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit">
             <span>🇫🇷</span>
           </IconButton>
-          <Typography className={classes.title} variant='h1' color='inherit'>App Title</Typography>
+          <Typography className={classes.title} variant='h4' color='inherit'>
+            App Title {value.language}
+          </Typography>
           <Switch onChange={toggleTheme} />
           <div className={classes.grow}/>
           <div className={classes.search}>
@@ -32,6 +37,8 @@ function Navbar(props) {
         </Toolbar>
       </AppBar>
     </div>
+      )}
+    </LanguageContext.Consumer>
   )
 }
 

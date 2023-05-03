@@ -16,8 +16,9 @@ return {
   },
   title: {
     display: "none",
-    [theme.breakpoints]: {
-      display: "block"
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+      textTransform: "capitalize"
     }
   },
   search: {
