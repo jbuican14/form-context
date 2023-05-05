@@ -34,6 +34,7 @@ step2 : send this new method as a value through ThemeProvider
 ex. '<ThemeContext.Provider value={{isDarkMode, toggleTheme}}>'
 now the context has this function so go ahead and extract it out
 
+- Create High order function for createContext
 
 Material UI https://v4.mui.com/customization/globals/ 
 Git : https://github.com/Colt/context-demo-app/blob/add-initial-components/package.json

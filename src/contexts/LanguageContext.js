@@ -15,3 +15,9 @@ export const LanguageProvider = ({children}) => {
     <LanguageContext.Provider value={{language, changeLanguage}}>{children}</LanguageContext.Provider>
   )
 }
+
+export const withLanguageContext = Component => props => (
+  <LanguageContext.Consumer>
+    {value => <Component languageContext={value} {...props} />}
+  </LanguageContext.Consumer>
+)
