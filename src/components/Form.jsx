@@ -23,7 +23,7 @@ const words = {
   },
   spanish: {
     email:"Correo Èlectronico",
-    password: "password",
+    password: "contraseña",
     rememberMe: "Acuérdate de Mí",
     signIn: "Iniciar Sesión"
   },
