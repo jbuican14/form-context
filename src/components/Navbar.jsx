@@ -3,7 +3,7 @@ import {AppBar, Toolbar, IconButton, Typography, Switch, InputBase, withStyles }
 import { SearchRounded } from '@material-ui/icons';
 import styles from '../styles/NavBarStyles';
 import { ThemeContext } from '../contexts/ThemeContext'
-import { withLanguageContext } from '../contexts/LanguageContext';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const words = {
   english: {
@@ -21,20 +21,19 @@ const words = {
 }
 
 function Navbar(props) {
-  const context = useContext(ThemeContext);
-  const { isDarkMode, toggleTheme } = context;
-  const {classes, languageContext} = props; 
-  console.log('🚀 ~ file: Navbar.jsx:12 ~ Navbar ~ props:', props, words[languageContext.language])
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { language } = useContext(LanguageContext);
+  const {classes} = props; 
   
   return (
     <div className={classes.root}>
       <AppBar position='static' color={isDarkMode? 'default': 'primary'}>
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit">
-            <span>{words[languageContext.language].flag}</span>
+            <span>{words[language].flag}</span>
           </IconButton>
           <Typography className={classes.title} variant='h4' color='inherit'>
-            App Title {languageContext.language}
+            App Title {language}
           </Typography>
           <Switch onChange={toggleTheme} />
           <div className={classes.grow}/>
@@ -42,7 +41,7 @@ function Navbar(props) {
             <div className={classes.SearchRounded}>
               <SearchRounded />
               </div>
-              <InputBase placeholder={`${words[languageContext.language].search}...`} classes={{
+              <InputBase placeholder={`${words[language].search}...`} classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput
               }} />
@@ -54,4 +53,4 @@ function Navbar(props) {
   )
 }
 
-export default withLanguageContext(withStyles(styles)(Navbar)); 
+export default withStyles(styles)(Navbar); 

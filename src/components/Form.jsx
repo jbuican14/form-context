@@ -1,4 +1,4 @@
-import { Avatar, Button, CssBaseline, 
+import { Avatar, Button, 
         FormControl, FormControlLabel, 
         Checkbox, Input, InputLabel, 
         Paper, Typography, MenuItem, Select,
@@ -30,8 +30,7 @@ const words = {
 }
 
 function Form({classes}) {
-  const context = useContext(LanguageContext);
-  const { language, changeLanguage } = context;
+  const { language, changeLanguage } = useContext(LanguageContext);
   const { email, password, rememberMe, signIn} = words[language];
   return (
     <main className={classes.main}>
